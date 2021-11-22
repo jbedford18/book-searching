@@ -21,9 +21,7 @@ const startServer = async () => {
   // Start the Apollo server
   await server.start();
 
-
   server.applyMiddleware({ app });
-
   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 };
 

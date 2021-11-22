@@ -30,9 +30,7 @@ const SavedBooks = () => {
         variables: { bookId }
       });
 
-      if (error) {
-        throw new Error('Something went wrong!');
-      }
+
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
     } catch (err) {

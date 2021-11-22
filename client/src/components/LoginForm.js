@@ -31,11 +31,7 @@ const LoginForm = () => {
         variables: { ...userFormData}
       });
 
-      if (error) {
-        throw new Error('something went wrong!');
-      }
-
-      
+          
       Auth.login(data.login.token);
 
     } catch (err) {

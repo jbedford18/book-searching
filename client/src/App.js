@@ -4,6 +4,7 @@ import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 import { ApolloProvider } from '@apollo/react-hooks';
+import ApolloClient from 'apollo-boost';
 
 const client = new ApolloClient({
   request: operation => {
@@ -31,10 +32,9 @@ function App() {
            
               <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
 
-              <Route component={NoMatch} />
             </Switch>
   
-          <Footer />
+         
         </>
       </Router>
     </ApolloProvider>
